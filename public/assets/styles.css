@@ -1,0 +1,60 @@
+body {
+  background: url("../img/back1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.header {
+  position: sticky;
+  width: 100vw;
+  height: 6vh;
+  background-color: black;
+  padding: 0.3rem 0.5rem;
+}
+
+.nav {
+  color: white;
+}
+
+.container {
+  background-color: black;
+  opacity: 90%;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.center-primary-text {
+  text-align: center;
+  color: white;
+  margin-top: 1rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.footerP {
+  padding-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.zSword {
+  max-width: 300px;
+  max-height: 500px;
+  margin: 0 auto;
+}
+
+.btn {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* body {
+  background-color: purple;
+} */

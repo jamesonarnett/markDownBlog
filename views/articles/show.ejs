@@ -11,10 +11,11 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../../public/assets/styles.css" />
   </head>
   <body>
-    <div class="container">
-      <h1 class="mb-1"><%= article.title %></h1>
+    <div style="color: white" class="container">
+      <h1 class="mb-2 center-primary-text"><%= article.title %></h1>
       <div class="text-muted mb-2">
         <%= article.createdAt.toLocaleDateString() %>
       </div>

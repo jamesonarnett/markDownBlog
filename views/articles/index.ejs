@@ -11,10 +11,33 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../../public/assets/styles.css" />
+    <link rel="stylesheet" href="../../public/img/" />
   </head>
   <body>
+    <script type="text/javascript">
+      let bgcount = 5;
+      function changebg() {
+        let num = Math.ceil(Math.random() * bgcount);
+        document.body.style.background = "../../public/img/" + num + ".jpg";
+        console.log(document.body.background);
+      }
+      changebg();
+    </script>
+
+    <header class="header">
+      <nav class="nav">
+        <h2>A WebDev Adventure</h2>
+      </nav>
+    </header>
+
     <div class="container">
-      <h1 class="mb-4">Blog Articles</h1>
+      <h1 class="mb-4 center-primary-text">
+        Its dangerous to go alone!
+        <br />
+        Take this...
+      </h1>
+
       <a href="/articles/new" class="btn btn-success">New Article</a>
 
       <% articles.forEach(article => { %>
@@ -25,13 +48,36 @@
             <%= article.createdAt.toLocaleDateString() %>
           </div>
           <div class="card-text mb-2"><%= article.description %></div>
-         <a href="articles/<%= article.slug %>" class="btn btn-primary">Read More</a>
-         <a href="articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
-         <form class="d-inline" action="/articles/<%= article.id %>?_method=DELETE" method="POST">
-           <button type="submit" class="btn btn-danger">Delete</button>
-         </form>
+          <a href="articles/<%= article.slug %>" class="btn btn-primary"
+            >Read More</a
+          >
+          <a href="articles/edit/<%= article.id %>" class="btn btn-info"
+            >Edit</a
+          >
+          <form
+            class="d-inline"
+            action="/articles/<%= article.id %>?_method=DELETE"
+            method="POST"
+          >
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+        <% }) %>
       </div>
-      <% }) %>
     </div>
+
+    <img
+      class="zSword"
+      src="../../public/img/zSword.png"
+      alt="an 8 bit sword from the Legend Of Zelda games"
+    />
+
+    <footer class="footer">
+      <p class="footerP">Good luck on your adventure</p>
+      J --
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+    </footer>
   </body>
 </html>
